@@ -4,7 +4,7 @@ $report = new MyReport;
 $report->run();
 ?>
 <?php
-if (isset($_POST['command'])) {
+if (isset($_POST['command']) && $_POST['command'] === 'randomizeData') {
 ?>
     <div id='report_render'>
         <?php

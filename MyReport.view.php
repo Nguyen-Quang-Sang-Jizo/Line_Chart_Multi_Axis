@@ -15,14 +15,6 @@
         ['month' => 'July',      'series1' => randomScalingFactor(), 'series2' => randomScalingFactor()],
     ];
 
-    if (isset($_POST['command']) && $_POST['command'] === 'randomizeData') {
-        foreach ($data as &$entry) {
-            for ($i = 1; $i < count($data); $i++) {
-                $entry['series' . $i] = randomScalingFactor();
-            }
-        }
-    }
-
     \koolreport\chartjs\LineChart::create(array(
         'dataSource' => $data,
         'columns' => array(
